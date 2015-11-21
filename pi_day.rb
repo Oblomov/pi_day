@@ -19,7 +19,9 @@ if ARGV.length > 0
 	when /^tau$/i
 		target = 2*Math::PI
 	when /^phi$/
-		target = (Math::sqrt 5 + 1)/2
+		target = (Math::sqrt(5) + 1)/2
+	when /^ga$/ # golden angle = 2 pi / phi, which simplifies to (3 - sqrt(5)) pi
+		target = (3 - Math::sqrt(5))*Math::PI
 	when /^(\d+|\d*\.\d+)$/
 		target = ARGV[0].to_f
 	else
